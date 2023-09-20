@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
@@ -17,5 +18,10 @@ public class ResultActivity extends AppCompatActivity {
         String str=intent.getStringExtra("result");
         textView.setText(str);
 
+    }
+
+    public void returnToMainActivity(String s){
+        Intent intentMain=new Intent(this,MainActivity.class);
+        startActivity(intentMain);
     }
 }

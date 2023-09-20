@@ -122,9 +122,9 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void goToActivity(String s){
-        Intent intent=new Intent(this,ResultActivity.class);
-        intent.putExtra("result",s);
-        startActivity(intent);
+        Intent intentResult=new Intent(this,ResultActivity.class);
+        intentResult.putExtra("result",s);
+        startActivity(intentResult);
     }
 
     @Override
