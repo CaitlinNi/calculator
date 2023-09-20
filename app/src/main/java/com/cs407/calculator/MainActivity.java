@@ -13,75 +13,111 @@ public class MainActivity extends AppCompatActivity{
 
     public void addFunction(View view){
 
-    //data taken from the text inputOne
-    EditText inputOne=(EditText)findViewById(R.id.inputOne);
-    int a=Integer.parseInt(inputOne.getText().toString());
+        //data taken from the text inputOne
+        EditText inputOne=(EditText)findViewById(R.id.inputOne);
 
-    //data taken from the text inputTwo
-    EditText inputTwo=(EditText)findViewById(R.id.inputTwo);
-    int b=Integer.parseInt(inputTwo.getText().toString());
+        //data taken from the text inputTwo
+        EditText inputTwo=(EditText)findViewById(R.id.inputTwo);
 
-    //make the calculation
-    double c=a+b;
+        if(inputOne.getText().toString().equals("")){
+            //add message to the main activity screen
+            Toast.makeText(MainActivity.this,"Enter first number",Toast.LENGTH_LONG).show();
+        } else if(inputTwo.getText().toString().equals("")){
+            //add message to the main activity screen
+            Toast.makeText(MainActivity.this,"Enter second number",Toast.LENGTH_LONG).show();
+        } else {
+            int a=Integer.parseInt(inputOne.getText().toString());
+            int b=Integer.parseInt(inputTwo.getText().toString());
 
-    //open result screen
-    goToActivity(""+c);
+            //make the calculation
+            double c=a+b;
+
+            //open result screen
+            goToActivity(""+c);
+        }
     }
 
     public void subFunction(View view){
 
         //data taken from the text inputOne
         EditText inputOne=(EditText)findViewById(R.id.inputOne);
-        int a=Integer.parseInt(inputOne.getText().toString());
 
         //data taken from the text inputTwo
         EditText inputTwo=(EditText)findViewById(R.id.inputTwo);
-        int b=Integer.parseInt(inputTwo.getText().toString());
 
-        //make the calculation
-        double c=a-b;
+        if(inputOne.getText().toString().equals("")){
+            //add message to the main activity screen
+            Toast.makeText(MainActivity.this,"Enter first number",Toast.LENGTH_LONG).show();
+        } else if(inputTwo.getText().toString().equals("")){
+            //add message to the main activity screen
+            Toast.makeText(MainActivity.this,"Enter second number",Toast.LENGTH_LONG).show();
+        } else {
+            int a = Integer.parseInt(inputOne.getText().toString());
+            int b = Integer.parseInt(inputTwo.getText().toString());
 
-        //open result screen
-        goToActivity(""+c);
+            //make the calculation
+            double c = a - b;
+
+            //open result screen
+            goToActivity("" + c);
+        }
     }
 
     public void multFunction(View view){
 
         //data taken from the text inputOne
         EditText inputOne=(EditText)findViewById(R.id.inputOne);
-        int a=Integer.parseInt(inputOne.getText().toString());
 
         //data taken from the text inputTwo
         EditText inputTwo=(EditText)findViewById(R.id.inputTwo);
-        int b=Integer.parseInt(inputTwo.getText().toString());
 
-        //make the calculation
-        double c=a*b;
+        if(inputOne.getText().toString().equals("")){
+            //add message to the main activity screen
+            Toast.makeText(MainActivity.this,"Enter first number",Toast.LENGTH_LONG).show();
+        } else if(inputTwo.getText().toString().equals("")){
+            //add message to the main activity screen
+            Toast.makeText(MainActivity.this,"Enter second number",Toast.LENGTH_LONG).show();
+        } else {
+            int a = Integer.parseInt(inputOne.getText().toString());
+            int b = Integer.parseInt(inputTwo.getText().toString());
 
-        //open result screen
-        goToActivity(""+c);
+            //make the calculation
+            double c = a * b;
+
+            //open result screen
+            goToActivity("" + c);
+        }
     }
 
     public void divFunction(View view){
 
         //data taken from the text inputOne
         EditText inputOne=(EditText)findViewById(R.id.inputOne);
-        int a=Integer.parseInt(inputOne.getText().toString());
 
         //data taken from the text inputTwo
         EditText inputTwo=(EditText)findViewById(R.id.inputTwo);
-        int b=Integer.parseInt(inputTwo.getText().toString());
 
-        if(b==0){
+        if(inputOne.getText().toString().equals("")){
             //add message to the main activity screen
-            Toast.makeText(MainActivity.this,"Error:Dividing by Zero",Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,"Enter first number",Toast.LENGTH_LONG).show();
+        } else if(inputTwo.getText().toString().equals("")){
+            //add message to the main activity screen
+            Toast.makeText(MainActivity.this,"Enter second number",Toast.LENGTH_LONG).show();
+        } else {
+            double a = Double.parseDouble(inputOne.getText().toString());
+            double b = Double.parseDouble(inputTwo.getText().toString());
 
-        }else{
-            //make the calculation
-            double c=a/b;
+            if (b == 0.0) {
+                //add message to the main activity screen
+                Toast.makeText(MainActivity.this, "Error:Dividing by Zero", Toast.LENGTH_LONG).show();
 
-            //open result screen
-            goToActivity(""+c);
+            } else {
+                //make the calculation
+                double c = a / b;
+
+                //open result screen
+                goToActivity("" + c);
+            }
         }
     }
 
